@@ -1,0 +1,10 @@
+Hello World! This is a test file for TCP communication.
+The quick brown fox jumps over the lazy dog.
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+Programming is fun!
+Computer networks are fascinating.
+TCP provides reliable, ordered, and error-checked delivery of a stream of bytes.
+This file contains only printable ASCII characters for testing purposes.
+Enjoy coding and learning about network programming!
