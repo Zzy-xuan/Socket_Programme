@@ -25,52 +25,51 @@ pip install pandas
 支持IPv4地址
 需要开放的UDP端口（建议使用10000以上的端口避免冲突）
 
-二．配置选项
-1.服务端配置：
-参数	                 说明	                 默认值	是否必填
--p / --port	服务器监听端口	无	必填
--s / --student_id	学号后4位	                 无	必填
--l / --loss_rate	丢包率(0~1)	0.15	非必填
+二、配置选项
 
-2.客户配置：
-参数	                  说明	                        默认值	是否必填
--i / --ip	                  服务器IP地址	       无	                 必填
--p / --port	 服务器端口	       无	                 必填
--s / --student_id	 学号后四位	       无	                 必填
--t /--timeout	 初始超时时间	       0.3s/300ms	非必填
--n / --num_packets	 发送数据包数量	       30	                 非必填
--w / --window_size	 发送窗口大小（字节）    400	                 非必填
+1. 服务端配置：
+   参数：-p / --port，说明：服务器监听端口，默认值：无，是否必填：必填
+   参数：-server，说明：学号后4位，默认值：无，是否必填：必填
+   参数：-s / --student_id，说明：学号后四位，默认值：无，是否必填：必填
+   参数：-l / --loss_rate，说明：丢包率(0~1)，默认值：0.15，是否必填：非必填
 
-3.协议常量配置：
-常量	                                  说明	                 默认值
-DEFAULT_TIMEOUT	                 默认超时时间	0.3s/300ms
-MIN_DATA_SIZE	                 最小数据包大小	40
-MAX_DATA_SIZE	                 最大数据包大小	80
-WINDOW_SIZE	                 发送窗口大小	400
-TOTAL_PACKETS_TO_SEND	默认丢包率	0.15
+ 2. 客户配置：
+   参数：-i / --ip，说明：服务器IP地址，默认值：无，是否必填：必填
+   参数：-p / --port，说明：服务器端口，默认值：无，是否必填：必填
+   参数：-s / --student_id，说明：学号后四位，默认值：无，是否必填：必填
+   参数：-t / --timeout，说明：初始超时时间，默认值：0.3s/300ms，是否必填：非必填
+   参数：-n / --num_packets，说明：发送数据包数量，默认值：30，是否必填：非必填
+   参数：-w / --window_size，说明：发送窗口大小（字节），默认值：400，是否必填：非必填
+
+ 3. 协议常量配置：
+   常量：DEFAULT_TIMEOUT，说明：默认超时时间，默认值：0.3s/300ms
+   常量：MIN_DATA_SIZE，说明：最小数据包大小，默认值：40
+   常量：MAX_DATA_SIZE，说明：最大数据包大小，默认值：80
+   常量：WINDOW_SIZE，说明：发送窗口大小，默认值：400
+   常量：TOTAL_PACKETS_TO_SEND，说明：默认发送包的数量，默认值：30
 
 三.  项目结构
 
 ```
 240801112周雨萱/Task2/ 
-                                 ├── logger.py                             # 日志工具
-                                 ├── protocol.py                          #  协议定义
-                                 ├── readme.txt                           #  本说明文档
-                                 ├── run_log.txt                           #  客户端日志（此为示例。运行后生成）
-                                 ├── run_log_server.txt               #  服务器日志（运行后生成）
-                                 ├── udp_packet_capture.doc    #  抓包截图，运行截图，关键代码说明文档
-                                 ├── udpclient.py                        #  客户端主程序
-                                 └── udpserver.py                       #  服务器日志（此为示例。运行后生成）
+├── logger.py                             # 日志工具
+├── protocol.py                          #  协议定义
+├── readme.txt                           #  本说明文档
+├── run_log.txt                           #  客户端日志（此为示例。运行后生成）
+├── run_log_server.txt               #  服务器日志（运行后生成）
+├── udp_packet_capture.doc    #  抓包截图，运行截图，关键代码说明文档
+├── udpclient.py                        #  客户端主程序
+└── udpserver.py                       #  服务器日志（此为示例。运行后生成）
 ```
 四. 协议设计
-1.报文类型
-SYN                         type=1                   连接请求
-SYN_ACK                type=2                   连接请求确认
-ACK                         type=3                   确认
-DATA                      type=4                   数据报文
-DATA_ACK              type=5                  数据累计确认
-FIN                           type=6                  连接释放请求
-FIN_ACK                  type=7                  连接释放确认 
+1. 报文类型
+   报文类型：SYN，type值：1，说明：连接请求
+   报文类型：SYN_ACK，type值：2，说明：连接请求确认
+   报文类型：ACK，type值：3，说明：确认
+   报文类型：DATA，type值：4，说明：数据报文
+   报文类型：DATA_ACK，type值：5，说明：数据累计确认
+   报文类型：FIN，type值：6，说明：连接释放请求
+   报文类型：FIN_ACK，type值：7，说明：连接释放确认
 
 2.报文格式
 ┌─────────┬───────────┬───────────┬───────────┬───────────┬───────────┐

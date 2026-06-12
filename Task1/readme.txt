@@ -20,29 +20,27 @@ Python版本：Python 3.13.3
 输入文件必须为ASCII编码，最大限制10MB；
 日志文件使用GBK编码
 
-二．配置选项：
-1.服务端配置：
-配置项	                类型	     默认值
-server_ip	                字符串	     无
-server_port              整数	     无
-backlog	                整数	     5
-log_file	                字符串	  “run_log.txt”
-SO_REUSEADDR     布尔值	     True
+ 二、配置选项：
 
+1. 服务端配置：
+   配置项：server_ip，类型：字符串，默认值：无
+   配置项：server_port，类型：整数，默认值：无
+   配置项：backlog，类型：整数，默认值：5
+   配置项：log_file，类型：字符串，默认值："run_log.txt"
+   配置项：SO_REUSEADDR，类型：布尔值，默认值：True
 
-2.客户端配置
-配置项	                                   类型	                 默认值
-server_ip	                                   字符串                      无
-server_port	                  整数        	                 无
-file_path	                                   字符串	                 无
-Lmin	                                   整数	                 无
-Lmax	                                   整数	                 无
-seed	                                   整数	                 42（可选）
-log_file	                                   字符串                    “run_log.txt”
-MAX_FILE_SIZE	                  整数	                 10*1024*1024
- MAX_PACKET_LENGTH	 整数	                 10000
-连接超时	                                   浮点数	                 5.0秒
-数据传输超时	                  浮点数	                 10.0秒
+2. 客户端配置：
+   配置项：server_ip，类型：字符串，默认值：无
+   配置项：server_port，类型：整数，默认值：无
+   配置项：file_path，类型：字符串，默认值：无
+   配置项：Lmin，类型：整数，默认值：42（可选）
+   配置项：Lmax，类型：整数，默认值：无
+   配置项：seed，类型：整数，默认值：无
+   配置项：log_file，类型：字符串，默认值："run_log.txt"
+   配置项：MAX_FILE_SIZE，类型：整数，默认值：10*1024*1024
+   配置项：MAX_PACKET_LENGTH，类型：整数，默认值：10000
+   配置项：timeout_min，类型：浮点数，默认值：5.0秒
+   配置项：timeout_max，类型：浮点数，默认值：10.0秒
 
 
 3.报文类型常量（不可配置，仅供参考）
@@ -55,7 +53,7 @@ TYPE_REVERSE_ANSWER	4	反转应答类型报文
 三.  安装说明
 1. 克隆仓库
 ```bash
-git clone https://github.com/Zzy_xuan/tcp-socket-program.git
+git clone https://github.com/Zzy_xuan/socket-programme.git
 cd tcp-socket-program/TCP
 ```
 
@@ -144,13 +142,13 @@ TCP Client 启动
 
 ```
 240801112周雨萱/Task1/
-                                 ├── readme.txt                             # 本说明文档
-                                 ├── reservetcpclient.py               # 客户端主程序
-                                 ├── reservetcpserver.py              # 服务器主程序
-                                 ├── run_log.txt                             # 运行日志（示例，运行后生成）
-                                 ├── tcp_packet_capture.doc       # wireshark抓包截图，运行终端截图，关键代码等说明文档
-                                 ├── test.txt                                   # 测试文件（示例）
-                                 └── test_reversed.txt                   # 最终输出的反转文本（示例，运行后生成）
+├── readme.txt                             # 本说明文档
+├── reservetcpclient.py               # 客户端主程序
+├── reservetcpserver.py              # 服务器主程序
+├── run_log.txt                             # 运行日志（示例，运行后生成）
+├── tcp_packet_capture.doc       # wireshark抓包截图，运行终端截图，关键代码等说明文档
+├── test.txt                                   # 测试文件（示例）
+└── test_reversed.txt                   # 最终输出的反转文本（示例，运行后生成）
 ```
 
 六. 代码框架
