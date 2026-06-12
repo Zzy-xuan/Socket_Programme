@@ -1,7 +1,5 @@
 Task 1 TCP Socket programming
 
-周雨萱-240801112-计算机242                2026.6.9
-
 项目简介：
 本程序实现了一个基于TCP的文本反转服务系统。客户端将ASCII文件随
 机分块后发送给服务器，服务器将每块字符串反转后返回，客户端最终输
@@ -146,12 +144,13 @@ TCP Client 启动
 
 ```
 240801112周雨萱/Task1/
-                                 ├── reservetcpserver.py              # 服务器程序
-                                 ├── reservetcpclient.py              # 客户端程序
-                                 ├── test.txt                                  # 测试文件（示例）
-                                 ├── tcp_packet_capture             #wireshark抓包截图，运行终端截图，关键代码等
-                                 ├── readme.md                          # 本文档
-                                 └── run_log.txt                           # 运行日志（程序运行时生成）
+                                 ├── readme.txt                             # 本说明文档
+                                 ├── reservetcpclient.py               # 客户端主程序
+                                 ├── reservetcpserver.py              # 服务器主程序
+                                 ├── run_log.txt                             # 运行日志（示例，运行后生成）
+                                 ├── tcp_packet_capture.doc       # wireshark抓包截图，运行终端截图，关键代码等说明文档
+                                 ├── test.txt                                   # 测试文件（示例）
+                                 └── test_reversed.txt                   # 最终输出的反转文本（示例，运行后生成）
 ```
 
 六. 代码框架
