@@ -43,17 +43,16 @@ Python版本：Python 3.13.3
    配置项：timeout_max，类型：浮点数，默认值：10.0秒
 
 
-3.报文类型常量（不可配置，仅供参考）
-常量名	                                  值	说明
-TYPE_INITIALIZATION	1	初始化类型报文
-TYPE_AGREE	                 2	同意类型报文
-TYPE_REVERSE_REQUEST	3	反转请求类型报文
-TYPE_REVERSE_ANSWER	4	反转应答类型报文
+3. 报文类型常量（不可配置，仅供参考）
+   常量名：TYPE_INITIALIZATION，值：1，说明：初始化类型报文
+   常量名：TYPE_AGREE，值：2，说明：同意类型报文
+   常量名：TYPE_REVERSE_REQUEST，值：3，说明：反转请求类型报文
+   常量名：TYPE_REVERSE_ANSWER，值：4，说明：反转应答类型报文
 
 三.  安装说明
 1. 克隆仓库
 ```bash
-git clone https://github.com/Zzy_xuan/socket-programme.git
+git clone https://github.com/Zzy_xuan/Socket-Programme.git
 cd tcp-socket-program/TCP
 ```
 
